@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
     role: 'Mahasiswa',
     image: 'https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=400',
     rating: 5,
-    text: 'Harga yang ditawarkan sangat kompetitif dan masih bergaransi resmi. Tidak ada biaya tersembunyi, transparansi penuh. Terima kasih iPhone Store!'
+    text: 'Harga yang ditawarkan sangat kompetitif dan masih bergaransi resmi. Tidak ada biaya tersembunyi, transparansi penuh. Terima kasih iPhone Station!'
   },
   {
     id: 4,
