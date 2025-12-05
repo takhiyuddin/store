@@ -16,7 +16,7 @@ const testimonials: Testimonial[] = [
     role: 'Profesional IT',
     image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=400',
     rating: 5,
-    text: 'Pelayanan luar biasa! iPhone 15 Pro yang saya beli dalam kondisi sempurna. Proses checkout sangat mudah dan respon via WhatsApp sangat cepat. Pasti akan beli lagi!'
+    text: "Pelayanan luar biasa! iPhone 15 Pro yang saya beli dalam kondisi sempurna. Proses checkout sangat mudah dan respon via WhatsApp sangat cepat. Pasti akan beli lagi!"
   },
   {
     id: 2,
