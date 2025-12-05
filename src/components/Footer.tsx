@@ -28,7 +28,7 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Kontak Kami</h3>
             <ul className="space-y-2 text-gray-600 text-sm">
               <li>+62 812-3456-7890</li>
-              <li>info@iphonestore.com</li>
+              <li>info@iphonestation.com</li>
               <li>Yogyakarta, Indonesia</li>
             </ul>
           </div>
