@@ -64,7 +64,7 @@ export default function Testimonials() {
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow animate-fade-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-4" aria-label={`Rating: ${testimonial.rating} dari 5`}>
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star
                     key={i}
@@ -74,7 +74,7 @@ export default function Testimonials() {
               </div>
 
               <p className="text-gray-700 mb-6 leading-relaxed">
-                "{testimonial.text}"
+                {testimonial.text}
               </p>
 
               <div className="flex items-center gap-4 pt-6 border-t border-gray-200">
@@ -82,6 +82,7 @@ export default function Testimonials() {
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-12 h-12 rounded-full object-cover"
+                  loading="lazy"
                 />
                 <div>
                   <p className="font-semibold text-gray-900">
