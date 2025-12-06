@@ -42,7 +42,7 @@ export default function Contact() {
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
             <p className="text-gray-600 text-sm mb-4">Kirim pertanyaan detail</p>
-            <p className="text-gray-900 font-medium">info@iphonestation.com</p>
+            <p className="text-gray-900 font-medium">info@applestation.com</p>
           </div>
         </div>
 
