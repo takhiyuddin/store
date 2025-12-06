@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-200 pt-8 text-center text-gray-600 text-sm">
-          <p>&copy; 2024 iPhone Station. All rights reserved.</p>
+          <p>&copy; 2024 Apple Station. All rights reserved.</p>
         </div>
       </div>
     </footer>
