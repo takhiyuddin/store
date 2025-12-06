@@ -55,7 +55,7 @@ VALUES
     'Content Creator',
     'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400',
     5,
-    'Sebagai content creator, saya butuh iPhone dengan kamera terbaik. Tim iPhone Station sangat membantu dalam memilih iPhone 15 Pro Max. Hasilnya memuaskan banget!'
+    'Sebagai content creator, saya butuh iPhone dengan kamera terbaik. Tim Apple Station sangat membantu dalam memilih iPhone 15 Pro Max. Hasilnya memuaskan banget!'
   ),
   (
     (SELECT id FROM collections WHERE slug = 'iphone'),
