@@ -4,7 +4,11 @@ import { Product, Collection } from '../types/product';
 import ProductCard from './ProductCard';
 import ProductModal from './ProductModal';
 
-export default function ProductGrid() {
+interface ProductGridProps {
+  onCollectionChange?: (collectionId: string | null) => void;
+}
+
+export default function ProductGrid({ onCollectionChange }: ProductGridProps) {
   const [products, setProducts] = useState<Product[]>([]);
   const [collections, setCollections] = useState<Collection[]>([]);
   const [selectedCollection, setSelectedCollection] = useState<string | null>(null);
@@ -18,7 +22,8 @@ export default function ProductGrid() {
 
   useEffect(() => {
     fetchProducts();
-  }, [selectedCollection]);
+    onCollectionChange?.(selectedCollection);
+  }, [selectedCollection, onCollectionChange]);
 
   const fetchCollections = async () => {
     try {

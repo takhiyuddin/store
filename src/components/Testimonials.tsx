@@ -1,50 +1,69 @@
+import { useEffect, useState } from 'react';
 import { Star } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 interface Testimonial {
-  id: number;
+  id: string;
   name: string;
   role: string;
   image: string;
   rating: number;
   text: string;
+  collection_id: string;
 }
 
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: 'Susi Pujiastuti',
-    role: 'Profesional IT',
-    image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=400',
-    rating: 5,
-    text: "Pelayanan luar biasa! iPhone 15 Pro yang saya beli dalam kondisi sempurna. Proses checkout sangat mudah dan respon via WhatsApp sangat cepat. Pasti akan beli lagi!"
-  },
-  {
-    id: 2,
-    name: 'Siti Rahmawati',
-    role: 'Content Creator',
-    image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400',
-    rating: 5,
-    text: 'Sebagai content creator, saya butuh iPhone dengan kamera terbaik. Tim iPhone Station sangat membantu dalam memilih iPhone 15 Pro Max. Hasilnya memuaskan banget!'
-  },
-  {
-    id: 3,
-    name: 'Ahmad Wijaya',
-    role: 'Mahasiswa',
-    image: 'https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=400',
-    rating: 5,
-    text: 'Harga yang ditawarkan sangat kompetitif dan masih bergaransi resmi. Tidak ada biaya tersembunyi, transparansi penuh. Terima kasih iPhone Station!'
-  },
-  {
-    id: 4,
-    name: 'Dr. Ratna Wijayanti',
-    role: 'Dokter',
-    image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400',
-    rating: 5,
-    text: 'Saya beli iPhone 14 second dari toko ini. Kondisinya sangat baik seperti baru, dan harganya jauh lebih terjangkau. Rekomendasi untuk semua orang!'
-  },
-];
+interface TestimonialsProps {
+  collectionId?: string | null;
+}
 
-export default function Testimonials() {
+export default function Testimonials({ collectionId }: TestimonialsProps) {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchTestimonials();
+  }, [collectionId]);
+
+  const fetchTestimonials = async () => {
+    try {
+      setLoading(true);
+      let query = supabase
+        .from('testimonials')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (collectionId) {
+        query = query.eq('collection_id', collectionId);
+      }
+
+      const { data, error } = await query;
+
+      if (error) throw error;
+      setTestimonials(data || []);
+    } catch (error) {
+      console.error('Error fetching testimonials:', error);
+      setTestimonials([]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <p className="text-gray-600">Memuat testimoni...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (testimonials.length === 0) {
+    return null;
+  }
+
   return (
     <section className="py-20 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
