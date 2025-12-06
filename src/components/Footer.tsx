@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Smartphone className="w-6 h-6" />
-              <span className="text-lg font-semibold">iPhone Station</span>
+              <span className="text-lg font-semibold">Apple Station</span>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed">
               Pusat penjualan iPhone terpercaya dengan harga terbaik dan bergaransi resmi.
