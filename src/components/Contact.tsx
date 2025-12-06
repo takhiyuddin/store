@@ -1,4 +1,4 @@
-import { MessageCircle, Phone, Mail } from 'lucide-react';
+import { MessageCircle, Mail, Clock } from 'lucide-react';
 
 export default function Contact() {
   const handleWhatsApp = () => {
@@ -29,9 +29,9 @@ export default function Contact() {
 
           <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
             <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Phone className="w-7 h-7 text-blue-600" />
+              <Clock className="w-7 h-7 text-blue-600" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Telepon</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Jam Pelayanan</h3>
             <p className="text-gray-600 text-sm mb-4">Senin - Sabtu, 09:00 - 18:00</p>
             <p className="text-gray-900 font-medium">+62 812-3456-7890</p>
           </div>
@@ -42,7 +42,7 @@ export default function Contact() {
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
             <p className="text-gray-600 text-sm mb-4">Kirim pertanyaan detail</p>
-            <p className="text-gray-900 font-medium">info@iphonestore.com</p>
+            <p className="text-gray-900 font-medium">info@iphonestation.com</p>
           </div>
         </div>
 
