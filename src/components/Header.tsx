@@ -23,7 +23,7 @@ export default function Header() {
           <div className="flex items-center gap-2">
             <Smartphone className="w-7 h-7 text-gray-900" />
             <span className="text-xl font-semibold tracking-tight text-gray-900">
-              iPhone Station
+              Apple Station
             </span>
           </div>
 
