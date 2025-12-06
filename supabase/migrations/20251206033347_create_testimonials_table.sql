@@ -63,7 +63,7 @@ VALUES
     'Mahasiswa',
     'https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&w=400',
     5,
-    'Harga yang ditawarkan sangat kompetitif dan masih bergaransi resmi. Tidak ada biaya tersembunyi, transparansi penuh. Terima kasih iPhone Station!'
+    'Harga yang ditawarkan sangat kompetitif dan masih bergaransi resmi. Tidak ada biaya tersembunyi, transparansi penuh. Terima kasih Apple Station!'
   ),
   (
     (SELECT id FROM collections WHERE slug = 'iphone'),
