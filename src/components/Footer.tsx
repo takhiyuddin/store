@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Smartphone className="w-6 h-6" />
-              <span className="text-lg font-semibold">Galaxy iStore</span>
+              <span className="text-lg font-semibold">iPhone Station</span>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed">
               Pusat penjualan iPhone terpercaya dengan harga terbaik dan bergaransi resmi.
@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-200 pt-8 text-center text-gray-600 text-sm">
-          <p>&copy; 2024 Apple Station. All rights reserved.</p>
+          <p>&copy; 2025 Apple Station. All rights reserved.</p>
         </div>
       </div>
     </footer>
