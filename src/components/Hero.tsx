@@ -8,7 +8,7 @@ export default function Hero() {
     <section id="home" className="pt-32 pb-20 px-6 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-5xl mx-auto text-center">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-gray-900 mb-6 animate-fade-in">
-          Katalog Produk iPhone
+          Katalog Produk Apple
           <br />
           <span className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
             Terlengkap & Terpercaya
