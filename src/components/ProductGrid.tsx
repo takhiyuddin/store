@@ -34,9 +34,6 @@ export default function ProductGrid({ onCollectionChange }: ProductGridProps) {
 
       if (error) throw error;
       setCollections(data || []);
-      if (data && data.length > 0) {
-        setSelectedCollection(data[0].id);
-      }
     } catch (error) {
       console.error('Error fetching collections:', error);
     }
@@ -49,7 +46,7 @@ export default function ProductGrid({ onCollectionChange }: ProductGridProps) {
         .select('*, collections(id, name, slug, description, icon)')
         .order('created_at', { ascending: false });
 
-      if (selectedCollection) {
+      if (selectedCollection !== null) {
         query = query.eq('collection_id', selectedCollection);
       }
 
@@ -93,6 +90,17 @@ export default function ProductGrid({ onCollectionChange }: ProductGridProps) {
           </div>
 
           <div className="flex flex-wrap justify-center gap-3 mb-16 animate-fade-in">
+            <button
+              onClick={() => setSelectedCollection(null)}
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                selectedCollection === null
+                  ? 'bg-gray-900 text-white shadow-lg scale-105'
+                  : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+              }`}
+            >
+              Semua Produk
+            </button>
+
             {collections.map((collection) => (
               <button
                 key={collection.id}
